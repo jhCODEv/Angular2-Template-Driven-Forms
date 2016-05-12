@@ -1,0 +1,16 @@
+<h3>Ingrese sus datos:</h3>
+<form #f="ngForm" (ngSubmit)="onSubmitLogIn()">
+     <p>
+        <label>Usuario:</label>
+        <input type="text"  
+                [(ngModel)]="vm.user" required>
+     </p>
+     <p>
+        <label>Password:</label>
+        <input type="password"  
+                [(ngModel)]="vm.password" required>
+     </p>
+     <p>
+         <button type="submit" [disabled]="!f.valid">Entrar</button>
+     </p>
+</form>
